@@ -4,7 +4,7 @@
 
   <groupId>com.h2database</groupId>
   <artifactId>h2</artifactId>
-  <version>2.2.219-SNAPSHOT</version>
+  <version>2.2.220.LS</version>
   <packaging>jar</packaging>
   <name>H2 Database Engine</name>
   <url>https://h2database.com</url>
@@ -72,26 +72,31 @@
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>${javax.servlet.version}</version>
+	  <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
       <version>${jakarta.servlet.version}</version>
+	  <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>org.apache.lucene</groupId>
       <artifactId>lucene-core</artifactId>
       <version>${lucene.version}</version>
+	  <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>org.apache.lucene</groupId>
       <artifactId>lucene-analyzers-common</artifactId>
       <version>${lucene.version}</version>
+	  <optional>true</optional>
     </dependency>
     <dependency>
         <groupId>org.apache.lucene</groupId>
         <artifactId>lucene-queryparser</artifactId>
         <version>${lucene.version}</version>
+	    <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -102,6 +107,7 @@
       <groupId>org.osgi</groupId>
       <artifactId>org.osgi.core</artifactId>
       <version>${osgi.version}</version>
+	  <optional>true</optional>
     </dependency>
     <dependency>
         <groupId>org.osgi</groupId>
@@ -113,6 +119,7 @@
       <groupId>org.locationtech.jts</groupId>
       <artifactId>jts-core</artifactId>
       <version>${jts.version}</version>
+	  <optional>true</optional>
     </dependency>
     <!-- END COMPILE DEPENDENCIES !-->
 
