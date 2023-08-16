@@ -15,7 +15,7 @@ public class Constants {
     /**
      * The build date is updated for each public release.
      */
-    public static final String BUILD_DATE = "2023-07-04";
+    public static final String BUILD_DATE = "2023-08-16";
 
     /**
      * Sequential version number. Even numbers are used for official releases,
@@ -34,7 +34,7 @@ public class Constants {
      * Additionally, a version number should be set to distinguish releases.
      * Example: ACME_SVN1651_BUILD3
      */
-    public static final String BUILD_VENDOR_AND_VERSION = null;
+    public static final String BUILD_VENDOR_AND_VERSION = "LS_0";
 
     /**
      * The TCP protocol version number 17.
