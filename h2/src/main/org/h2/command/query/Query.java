@@ -448,8 +448,18 @@ public abstract class Query extends Prepared {
         for (int i = 0; i < params.length; i++) {
             Value a = lastParams[i], b = params[i];
             // Derived tables can have gaps in parameters
-            if (a != null && !a.equals(b)) {
-                return false;
+            try {
+                if (a != null && !a.equals(b)) {
+                    return false;
+                }
+            } catch (DbException ex) {
+            	// lastParams can contain expired LOBs, just ignore and return false for this
+            	// check
+                if ( ex.getErrorCode() == ErrorCode.LOB_CLOSED_ON_TIMEOUT_1 ) {
+                    return false;
+                } else {
+                    throw ex;
+                }
             }
         }
         return getMaxDataModificationId() <= lastEval;
